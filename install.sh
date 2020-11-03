@@ -14,3 +14,5 @@ install -m644 ./profile/.* ~/
 
 install -m644 ./tmux/tmux.conf ~/.tmux.conf
 
+install -d ~/.config/multilock
+install -m644 ./multilock/config ~/.config/multilock/

@@ -1,2 +1,5 @@
 [ -e "${HOME}/.profile" ] && source "${HOME}/.profile"
 
+xset s on
+xset s $((5 * 60))
+
