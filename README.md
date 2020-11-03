@@ -34,5 +34,5 @@ provides following files for basic setup :
 
 ## dunst
 
-dunst notification server configuration, with a theme made to go with [my other configs](https://github.com/bullekeup/xorg-dwm-tools)
+dunst notification server configuration, with a theme made to go with [my other configs](https://github.com/bullekeup/xorg-wm-tools)
 
