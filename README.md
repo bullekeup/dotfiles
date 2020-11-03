@@ -22,7 +22,7 @@ Added support for copy pasting from / to tmux / system clipboard using xclip
 - 'c' key in copy mode copies to system clipboard
 - mouse selection in copy mode copied to X primary selection (aka middle click clipboard)
 
-## profile
+## profile
 
 provides following files for basic setup :
 
