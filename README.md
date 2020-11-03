@@ -6,8 +6,9 @@ Once cloned, can be auto-installed by running the install.sh shell script.
 
 ## alacritty
 
-Configured to use font : MesloLGS NF 10
-Start a new tmux session when launched
+Configured to use font MesloLGS NF 10
+
+Starts a new tmux session when launched
 
 ## tmux
 
@@ -26,10 +27,10 @@ Added support for copy pasting from / to tmux / system clipboard using xclip
 
 provides following files for basic setup :
 
-.bashrc: unused, here as a basic
-.zshrc: configured with oh-my-zsh (must be in ~/.config/oh-my-zsh) and powerlevel10k (see .p10k.zsh)
-.profile: defines generic env var for both shell and X
-.xprofile: defines X specific env var and programs to execute at startup
+- .bashrc: unused, here as a basic
+- .zshrc: configured with oh-my-zsh (must be in ~/.config/oh-my-zsh) and powerlevel10k (see .p10k.zsh)
+- .profile: defines generic env var for both shell and X
+- .xprofile: defines X specific env var and programs to execute at startup
 
 ## dunst
 
