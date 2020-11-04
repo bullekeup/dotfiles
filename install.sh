@@ -16,3 +16,7 @@ install -m644 ./tmux/tmux.conf ~/.tmux.conf
 
 install -d ~/.config/multilock
 install -m644 ./multilock/config ~/.config/multilock/
+
+install -d ~/.local/bin
+install -m755 ./scripts/mutt-launcher ~/.local/bin/
+

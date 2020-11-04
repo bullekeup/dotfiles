@@ -3,3 +3,6 @@
 xset s on
 xset s $((5 * 60))
 
+[ -n "$(ps -C xss-lock --no-headers)" ] || \
+  xss-lock -l -- multilockscreen --lock &
+
