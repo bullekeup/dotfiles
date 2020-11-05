@@ -1,0 +1,25 @@
+#!/bin/sh
+
+[ $# -lt 1 ] && exit 1;
+
+if [ "${1%%/*}" = "." ]; then
+  BOOKMARK_TARGET="$(pwd)${1##.}"
+elif [ "${1%%/*}" = ".." ]; then
+  BOOKMARK_TARGET="$(pwd | sed 's:\(.*\)/[^/]*/\?$:\1:g')${1#..}"
+else
+  BOOKMARK_TARGET="${1}"
+fi
+
+BOOKMARK_TARGET="${BOOKMARK_TARGET%/}"
+[ $# -gt 1 ] && BOOKMARK_NAME="$2" || {
+  BOOKMARK_NAME="$(basename "${1%/}")"
+}
+
+[ -e "${NNN_BOOKMARKS_DIR}" ] || install -d "${NNN_BOOKMARKS_DIR}"
+
+[ -e "${NNN_BOOKMARKS_DIR}/${BOOKMARK_NAME}" ] && {
+  echo "Error: ${BOOKMARK_NAME} bookmark already exists"
+  exit 1
+}
+ln -s "${BOOKMARK_TARGET}" "${NNN_BOOKMARKS_DIR}/${BOOKMARK_NAME}"
+

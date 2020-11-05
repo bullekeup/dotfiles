@@ -10,23 +10,26 @@ font:
     family: MesloLGS NF
     style: Italic
 
+background_opacity: 0.8
+
 # Colors (Iceberg Dark)
 colors:
   # Default colors
   primary:
-    background: '#161821'
-    foreground: '#d2d4de'
+    background: '#000000'
+    foreground: '#C0C0C0'
 
   # Normal colors
   normal:
-    black:   '#161821'
-    red:     '#e27878'
-    green:   '#b4be82'
-    yellow:  '#e2a478'
-    blue:    '#84a0c6'
+    black:   '#000000'
+    red:     '#e53935'
+    green:   '#43a047'
+    yellow:  '#fec006'
+    blue:    '#5895dc'
     magenta: '#a093c7'
-    cyan:    '#89b8c2'
-    white:   '#c6c8d1'
+    cyan:    '#00acc1'
+    white:   '#ffffff'
+    purple:  '#8e24aa'
 
   # Bright colors
   bright:

@@ -1,0 +1,30 @@
+#!/bin/sh
+
+[ -e ~/.local/share/scratchpad ] || {
+  install -d ~/.local/share/scratchpad
+  notes new notes/scratchpad
+  notes new todo/main
+}
+
+[ $(tmux list-sessions | grep -c "scratchpad") -gt 0 ] && {
+  [ $(pgrep -a alacritty | grep -c "scratchpad") -gt 0 ] && {
+    exit 0;
+  }
+} || {
+  tmux new-session -d -c ~/.local/share/scratchpad -s scratchpad -n scratchpad_note
+  tmux selectp -t 1
+
+  # C-m is "Enter"
+  tmux send-keys "notes o notes/scratchpad" C-m
+
+  tmux new-window -n scratchpad_todo
+  tmux selectw -t scratchpad_todo
+  tmux selectp -t 1
+  tmux send-keys "notes o todo/main" C-m
+  tmux new-window -n scratchpad_term
+  tmux selectw -t scratchpad_note
+}
+
+alacritty -t "scratchpad" -e tmux attach-session -t scratchpad &
+exit 0;
+

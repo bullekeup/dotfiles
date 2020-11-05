@@ -19,4 +19,6 @@ install -m644 ./multilock/config ~/.config/multilock/
 
 install -d ~/.local/bin
 install -m755 ./scripts/mutt-launcher ~/.local/bin/
+install -m755 ./scripts/scratchpad-launcher ~/.local/bin/
+install -m755 ./scripts/nnn-add-dir-bookmark ~/.local/bin/
 

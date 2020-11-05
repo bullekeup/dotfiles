@@ -79,6 +79,10 @@ plugins=(git zsh-autosuggestions)
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#18559C"
 
+if [[ -e "${HOME}/.local/share/zsh-completion/completions" ]]; then
+  fpath+="${HOME}/.local/share/zsh-completion/completions"
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -110,5 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[[ -e "${HOME}/.profile" ]] && source "${HOME}/.profile"
+[[ -r "${HOME}/.profile" ]] && source "${HOME}/.profile"
+
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
