@@ -4,7 +4,7 @@
   [ $(pgrep -a alacritty | grep -c "MailTerm") -gt 0 ] && {
     /opt/local/dwm/bin/dwm-msg run_command view $((1 << 2));
     exit 0;
-  }
+  } || true;
 } || {
   tmux new-session -d -c ~/.local/share/mail -s mail -n mutt
   tmux selectp -t 1
