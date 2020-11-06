@@ -1,7 +1,7 @@
 #!/bin/sh
 
-[ -e ~/.local/share/scratchpad ] || {
-  install -d ~/.local/share/scratchpad
+[ -e ~/.local/share/notes ] || {
+  install -d ~/.local/share/notes
   notes new notes/scratchpad
   notes new todo/main
 }

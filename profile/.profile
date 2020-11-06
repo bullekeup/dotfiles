@@ -1,4 +1,5 @@
 export EDITOR=nvim
+export VISUAL=nvim
 export PATH="${PATH}:${HOME}/.local/bin"
 
 export MANPATH="${MANPATH}:${HOME}/.local/share/man"
@@ -8,4 +9,6 @@ export NNN_BOOKMARKS_DIR="${XDG_CACHE_DIR:-$HOME/.cache}/nnn/bookmarks"
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)$"
 export NNN_TRASH=1
 export NNN_OPTS="adHEon"
+
+export SPACEVIMDIR="${HOME}/.config/spacevim"
 
