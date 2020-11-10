@@ -22,3 +22,12 @@ install -m755 ./scripts/mutt-launcher ~/.local/bin/
 install -m755 ./scripts/scratchpad-launcher ~/.local/bin/
 install -m755 ./scripts/nnn-add-dir-bookmark ~/.local/bin/
 
+install -d ~/.cache/go-build
+install -d ~/.cache/go-mod
+install -d ~/.cache/go-tmp
+install -d ~/.local/share/go/bin
+install -d ~/.config/go
+install -m644 ./go/env ~/.config/go/
+sed -i -e "s:{HOME}:${HOME}:g" ~/.config/go/env
+
+cd -

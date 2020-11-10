@@ -1,0 +1,5 @@
+GOPATH={HOME}/.local/share/go
+GOCACHE={HOME}/.cache/go-build
+GOENV={HOME}/.config/go/env
+GOMODCACHE={HOME}/.cache/go-mod
+GOTMPDIR={HOME}/.cache/go-tmp
