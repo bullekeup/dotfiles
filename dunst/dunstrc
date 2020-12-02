@@ -68,7 +68,7 @@
 
     icon_path = /usr/share/icons/Papirus-Dark/48x48/apps/:/usr/share/icons/Papirus-Dark/48x48/actions/:/usr/share/icons/Papirus-Dark/48x48/devices/:/usr/share/icons/Papirus-Dark/48x48/emblems/:/usr/share/icons/Papirus-Dark/48x48/emotes/:/usr/share/icons/Papirus-Dark/48x48/mimetypes/:/usr/share/icons/Papirus-Dark/48x48/places/:/usr/share/icons/Papirus-Dark/48x48/status/
     startup_notification = false
-    dmenu = /usr/bin/rofi -theme $HOME/.config/dunst/actions.rasi -dmenu -p "Notification actions"
+    dmenu = /usr/bin/rofi -theme ~/.config/dunst/actions.rasi -dmenu -p "Notification actions"
     browser = /usr/bin/brave
 
     mouse_left_click = do_action

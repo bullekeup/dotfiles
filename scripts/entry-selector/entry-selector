@@ -1,0 +1,21 @@
+#!/bin/sh
+
+[ $# -lt 1 ] && {
+  echo "Error : no input !"
+  exit 1
+}
+
+VALUES=""
+TITLE="entry"
+
+while [ $# -gt 0 ]; do
+  case $1 in
+    --values | -v ) VALUES="${2}"; shift; shift;;
+    --title | -t ) TITLE="${2}"; shift; shift;;
+    *) VALUES="${1}"; shift;;
+  esac
+done
+
+echo "${VALUES}" | rofi -no-lazy-grab -matching fuzzy -theme $HOME/.local/share/entry-selector/launcher.rasi \
+  -dmenu -p "${TITLE}:" -i -no-custom -window-title "${TITLE}-selector"
+

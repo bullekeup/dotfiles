@@ -8,8 +8,8 @@
 
 [ $(tmux list-sessions | grep -c "scratchpad") -gt 0 ] && {
   [ $(pgrep -a alacritty | grep -c "scratchpad") -gt 0 ] && {
-    exit 0;
-  }
+    exit 0
+  } || true
 } || {
   tmux new-session -d -c ~/.local/share/scratchpad -s scratchpad -n scratchpad_note
   tmux selectp -t 1

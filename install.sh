@@ -21,6 +21,7 @@ install -d ~/.local/bin
 install -m755 ./scripts/mutt-launcher ~/.local/bin/
 install -m755 ./scripts/scratchpad-launcher ~/.local/bin/
 install -m755 ./scripts/nnn-add-dir-bookmark ~/.local/bin/
+install -m755 ./scripts/devwksp-launcher ~/.local/bin/
 
 install -d ~/.cache/go-build
 install -d ~/.cache/go-mod
@@ -29,5 +30,10 @@ install -d ~/.local/share/go/bin
 install -d ~/.config/go
 install -m644 ./go/env ~/.config/go/
 sed -i -e "s:{HOME}:${HOME}:g" ~/.config/go/env
+
+install -d ~/.local/share/entry-selector
+find ./scripts/entry-selector -type f -print0 | xargs -0 -n1 -I % install -m644 % ~/.local/share/entry-selector/
+chmod +x ~/.local/share/entry-selector/entry-selector
+ln -f -s ~/.local/share/entry-selector/entry-selector ~/.local/bin/entry-selector
 
 cd -

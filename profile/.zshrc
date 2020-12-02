@@ -118,3 +118,7 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
+alias docker='sudo -g docker docker'
+alias docker-compose='sudo -g docker docker-compose'
+alias code='sudo -g docker code'
+
