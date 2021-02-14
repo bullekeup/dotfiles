@@ -10,6 +10,7 @@
   tmux selectp -t 1
 
   # C-m is "Enter" -> executes mutt in tmux
+  tmux send-keys "pyenv activate mail" C-m
   tmux send-keys "neomutt" C-m
   tmux splitw -h -p 35
   tmux send-keys "khal interactive" C-m

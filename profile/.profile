@@ -46,3 +46,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.config/nvm
 
 export GOENV="${HOME}/.config/go/env"
 export PATH="${PATH}:${HOME}/.local/share/go/bin"
+export HOSTNAME="$(hostname)"
